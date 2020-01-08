@@ -1,0 +1,63 @@
+<!DOCTYPE html>  
+ <html>  
+      <head>  
+           <style>
+                .cetak{
+                     position: sticky;
+                     width: 100px;
+                     height: 50px;
+                     background-color: whitesmoke;
+                     font-size: large;
+                }
+           </style>
+           <title>Data Workload</title>  
+           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
+           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
+           <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/bs-3.3.5/jq-2.1.4,dt-1.10.8/datatables.min.css"/>  
+           <script type="text/javascript" src="https://cdn.datatables.net/r/bs-3.3.5/jqc-1.11.3,dt-1.10.8/datatables.min.js"></script>  
+          
+          </head>  
+      <body>  
+           <br /><br />  
+           <div class="container"> 
+                <h1 align="center">Data Workload</h3><br />  
+                <h3 align="center">Workload Database</h3><br />  
+                <table id="data-table" class="table table-bordered">  
+                     <thead>  
+                          <tr>  
+                               <th>KODE USER</th>  
+                               <th>NAMA USER</th>  
+                               <th>NIK</th>  
+                               <th>JOB TITLE</th>
+                               <th>TOTAL IN</th>
+                               <th>TOTAL RILIS</th>
+                               <th>TOTAL CLOSED</th>
+                          </tr> 
+                     </thead>  
+                </table>  
+           </div> 
+
+           <!-- script -->
+           <script>  
+   $(document).ready(function(){  
+      $('#data-table').DataTable({  
+          "ajax" : "workload_coba.json",  
+          "columns"     :     [  
+               { "data" : "KODE_USER"},  
+               { "data" : "NAMA_USER"},  
+               { "data" : "NIK"},
+               { "data" : "JOBTITLE"},
+               { "data" : "TOTAL_IN"},
+               { "data" : "TOTAL_RILIS"},
+               { "data" : "TOTAL_CLOSED"}
+               
+          ]  
+      });  
+   });  
+   </script>  
+     <center> 
+      <button class="cetak" onclick="window.print()">Print</button>
+     </center>
+      </body>  
+ </html>

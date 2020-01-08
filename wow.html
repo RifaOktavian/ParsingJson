@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Mari Belajar Coding</title>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ <style>
+     #idp{
+         margin: 10px;
+     }
+ </style>
+ <script
+   src="http://code.jquery.com/jquery-3.3.1.js"
+   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+   crossorigin="anonymous"></script>
+
+   <script type="text/javascript">
+     $.getJSON("project.json", function(result){
+       console.log(result);
+       $.each(result, function(i){
+         document.getElementById("demo").innerHTML 
+         +="<tr><td>" + result[i].ID_PROJECT 
+         +"</td><td>" + result[i].PROJECT_NAME 
+         +"</td><td>" + result[i].DIVISI 
+         +"</td><td>" + result[i].STATUSREVIEW 
+         +"</td><td>" + result[i].ENDDATE 
+         +"</td><td>" + result[i].PMO 
+         +"</td><td>" + result[i].TIM 
+         +"</td><td>" + result[i].PROGRESS
+         +"</td><td><a class='btn btn-danger' href='latihan.html'> Cetak</a></td> </tr>";
+       }); 
+     });
+     ouput +="<table>";
+            ouput +="<tr>";
+     $.getJSON("project.json", function(result){
+       console.log(result);
+       $.each(result, function(i){
+         document.getElementById("idp").innerHTML +="<br>" + result[i].ID_PROJECT;
+       }); 
+     });
+        output +="</tr>";
+
+     $.getJSON("project.json", function(result){
+       console.log(result);
+       $.each(result, function(i){
+         document.getElementById("np").innerHTML +="<br>" + result[i].PROJECT_NAME;
+       }); 
+     });
+     $.getJSON("project.json", function(result){
+       console.log(result);
+       $.each(result, function(i){
+         document.getElementById("div").innerHTML +="<br>" + result[i].DIVISI;
+       }); 
+     });
+     $.getJSON("project.json", function(result){
+       console.log(result);
+       $.each(result, function(i){
+         document.getElementById("sr").innerHTML +="<br>" + result[i].STATUSREVIEW;
+         
+       }); 
+     });
+     $.getJSON("project.json", function(result){
+       console.log(result);
+       $.each(result, function(i){
+         document.getElementById("ed").innerHTML +="<br>" + result[i].ENDDATE;
+       }); 
+     });
+     $.getJSON("project.json", function(result){
+       console.log(result);
+       $.each(result, function(i){
+         document.getElementById("pmo").innerHTML +="<br>" + result[i].PMO;
+       }); 
+     });
+     $.getJSON("project.json", function(result){
+       console.log(result);
+       $.each(result, function(i){
+         document.getElementById("tim").innerHTML +="<br>" + result[i].TIM;
+       }); 
+     });
+     $.getJSON("project.json", function(result){
+       console.log(result);
+       $.each(result, function(i){
+         document.getElementById("pro").innerHTML +="<br>" + result[i].PROGRESS;
+       }); 
+     });
+   </script>
+</head>
+<body>
+    <div class="container">
+        <table class="table table-striped" id="demo">
+                <thead>
+                  <tr>
+                    <th scope="col">Id Project</th>
+                    <th scope="col">Nama Project</th>
+                    <th scope="col">Divisi</th>
+                    <th scope="col">Status Review</th>
+                    <th scope="col">End Date</th>
+                    <th scope="col">PMO</th>
+                    <th scope="col">TIM</th>
+                    <th scope="col">Progress</th>
+                    <th scope="col">Cetak</th>
+                  </tr>
+                </thead>
+                <tbody>
+              </table>
+</div>
+   <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ 
+</body>
+</html>
